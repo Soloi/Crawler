@@ -1,21 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package crawler;
 
-/**
- *
- * @author Daniel Palm
- */
 public class Crawler {
-
-    /**
-     * @param args the command line arguments
-     */
+    
+    public static String location;
+    
     public static void main(String[] args) {
-        System.out.println("Hello World");
-    }
+        
+        location = "";
+        
+
+        while (true){
+            switch (location){
+                case "basement":
+                    Basement.run();
+                    break;
+                case "kitchen":
+                    Kitchen.run();
+            
+            } // end switch
+        
+        } // end continous while-loop
+    } //end main
     
 }
