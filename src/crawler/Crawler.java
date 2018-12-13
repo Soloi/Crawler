@@ -7,16 +7,33 @@ public class Crawler {
     
     public static void main(String[] args) {
         
-        location = "";
+        location = "entreance"; 
         
 
-        while (true){
-            switch (location){
+        while (true){ // this while loop runs the entire time the program is running
+            switch (location){ // this switch contains all in-game locations
+                case "entreance":
+                    Entreance.run();
+                    location = "hallway";
+                    break;
+                case "hallway":
+                    Hallway.run();
+                    break;
                 case "basement":
                     Basement.run();
                     break;
                 case "kitchen":
                     Kitchen.run();
+                    break;
+                case "livingroom":
+                    LivingRoom.run();
+                    break;
+                case "bedroom":
+                    Bedroom.run();
+                    break;
+                case "attic":
+                    Attic.run();
+                    break;
             
             } // end switch
         
